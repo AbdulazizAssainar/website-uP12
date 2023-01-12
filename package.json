@@ -1,0 +1,32 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website using NodeJS",
+  "main": "./build/server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node build/server.js",
+    "dev": "nodemon -- incpect build/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulazizAssainar/Personal-Website.git"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "AbdulazizAssainar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulazizAssainar/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/AbdulazizAssainar/Personal-Website#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.18"
+  }
+}
