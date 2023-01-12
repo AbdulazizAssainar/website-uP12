@@ -5,7 +5,7 @@
   "main": "./build/server.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "node build/server.js",
+    "start": "npm run build && node build/server.js",
     "dev": "nodemon -- incpect build/server.js"
   },
   "repository": {
