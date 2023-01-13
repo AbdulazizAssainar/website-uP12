@@ -6,8 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "gitcommit": "npm run build && git add . && git commit -m 'commit.'",
-    "start": "npm run build && node build/server.js",
-    "deploy": "npm run build && eb deploy",
+    "start": "npm run gitcommit && node build/server.js",
+    "deploy": "npm run gitcommit && eb deploy",
     "dev": "nodemon -- incpect build/server.js"
   },
   "repository": {
