@@ -4,10 +4,10 @@
   "description": "Personal website using NodeJS",
   "main": "./build/server.js",
   "scripts": {
-    "build": "npx tsc",
-    "gitcommit": "npm run build && git add . && git commit -m 'commit.'",
+    "build": "npx tsc && npm run gitcommit",
+    "gitcommit": "git add . && git commit -m 'commit.'",
     "start": "node build/server.js",
-    "deploy": "npm run gitcommit && eb deploy",
+    "deploy": "npm run build && eb deploy",
     "dev": "nodemon -- incpect build/server.js"
   },
   "repository": {
