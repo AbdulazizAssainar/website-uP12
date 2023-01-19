@@ -4,6 +4,6 @@ import { pagesPath } from '../../utilities/paths';
 const olymp: express.Application = express();
 
 olymp.get('/', function (req: Request, res: Response) {
-  res.sendFile(pagesPath + '/index.html');
+  res.sendFile(pagesPath + '/olymptrade.html');
 });
 export default olymp;

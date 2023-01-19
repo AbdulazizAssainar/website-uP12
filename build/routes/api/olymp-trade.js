@@ -7,6 +7,6 @@ const express_1 = __importDefault(require("express"));
 const paths_1 = require("../../utilities/paths");
 const olymp = (0, express_1.default)();
 olymp.get('/', function (req, res) {
-    res.sendFile(paths_1.pagesPath + '/index.html');
+    res.sendFile(paths_1.pagesPath + '/olymptrade.html');
 });
 exports.default = olymp;

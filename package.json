@@ -7,8 +7,8 @@
     "build": "npx tsc && npm run gitcommit",
     "gitcommit": "git add . && git commit -m 'commit.' && git push",
     "start": "node build/server.js",
-    "deploy": "npm run build && eb deploy",
-    "dev": "nodemon -- incpect build/server.js"
+    "deploy": "npm run build && eb use node-web-express-env && eb deploy",
+    "dev": "node build/server.js"
   },
   "repository": {
     "type": "git",
