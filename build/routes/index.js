@@ -5,10 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const paths_1 = require("../utilities/paths");
+const olymp_trade_1 = __importDefault(require("./api/olymp-trade"));
 const routes = (0, express_1.default)();
 routes.get('/', function (req, res) {
     res.sendFile(paths_1.pagesPath + '/index.html');
 });
+routes.use('/olymp', olymp_trade_1.default);
 routes.get('/pages/style/index.css', (req, res) => {
     res.sendFile(paths_1.pagesPath + '/style/index.css');
 });
