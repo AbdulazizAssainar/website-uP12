@@ -9,4 +9,7 @@ const olymp = (0, express_1.default)();
 olymp.get('/', function (req, res) {
     res.sendFile(paths_1.pagesPath + '/olymptrade.html');
 });
+olymp.get('/fun', function (req, res) {
+    res.sendFile(paths_1.buildPath + '/module/olymptrade.js');
+});
 exports.default = olymp;
