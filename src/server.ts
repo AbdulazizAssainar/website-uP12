@@ -8,6 +8,7 @@ import { IndexRouter } from "./controllers/v0/index.router";
 import bodyParser from "body-parser";
 import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 import { config } from "./config/config";
+import routes from "./routes";
 
 (async () => {
   dotenv.config();
@@ -40,9 +41,7 @@ import { config } from "./config/config";
   }));
 
   // Root URI call
-  app.get("/", async (req, res) => {
-    res.send("/api/v0/");
-  });
+app.use('/', routes);
 
   // Start the Server
   app.listen(port, () => {

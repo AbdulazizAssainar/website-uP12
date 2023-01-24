@@ -3,17 +3,15 @@
   "version": "2.0.0",
   "description": "",
   "main": "server.js",
-  "engines": {
-    "node": ">=5.6.3 <19"
-  },
   "scripts": {
-    "start": "yarn build && node ./www/server.js",
+    "start": "node server.js",
+    "git": "yarn build && git commit -a -m 'commit' && git push",
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
-    "clean": "rm -rf www/ || true",
-    "deploy": "eb list && eb use udagram-api-env && eb deploy",
-    "build": "tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && echo \"Project building finished successfully\"",
+    "clean": "rm -rf archive.zip && rm -rf www/ || true",
+    "deploy": "yarn git && eb list && eb use website-env && eb deploy",
+    "build": "yarn clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && tar -czvf archive.zip ./www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
