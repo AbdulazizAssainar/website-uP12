@@ -4,7 +4,7 @@
   "description": "aws website using nodeJS for personal use",
   "main": "server.js",
   "scripts": {
-    "start": "node ./www/server.js",
+    "start": "node ./server.js",
     "git": "yarn build && git commit -a -m 'commit' && git push",
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn ./src/server.ts",
