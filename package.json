@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "aws website using nodeJS for personal use",
   "main": "server.js",
+  "engines": {
+    "node": ">= 5.6.3 < 19"
+  },
   "scripts": {
-    "start": "node ./server.js",
+    "start": "node server.js",
     "git": "yarn build && git commit -a -m 'commit' && git push",
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn ./src/server.ts",
