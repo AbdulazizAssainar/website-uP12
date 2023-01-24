@@ -45,7 +45,7 @@ const routes_1 = __importDefault(require("./routes"));
     yield sequelize_1.sequelize.sync();
     console.log("Database Connected");
     const app = express_1.default();
-    const port = process.env.PORT || 8080;
+    const port = 8080;
     app.use(body_parser_1.default.json());
     // app.use(cors());
     // We set the CORS origin to * so that we don't need to
