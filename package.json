@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "aws website using nodeJS for personal use",
   "main": "server.js",
   "engines": {
