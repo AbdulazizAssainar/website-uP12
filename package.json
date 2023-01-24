@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    
     "start": "node server.js",
     "git": "yarn build && git commit -a -m 'commit' && git push",
     "tsc": "npx tsc",
