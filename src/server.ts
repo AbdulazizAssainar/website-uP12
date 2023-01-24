@@ -1,15 +1,55 @@
+import * as dotenv from "dotenv";
+import cors from 'cors';
 import express from "express";
-import routes from './routes';
+import { sequelize } from "./sequelize";
 
-const app = express();
-const port: string = process.env.PORT || '3000';
-const address: string = `localhost:${port}`;
+import { IndexRouter } from "./controllers/v0/index.router";
 
-app.use(express.json());
+import bodyParser from "body-parser";
+import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
+import { config } from "./config/config";
 
-app.use('/', routes)
+(async () => {
+  dotenv.config();
 
+  await sequelize.addModels(V0_FEED_MODELS);
+  await sequelize.addModels(V0_USER_MODELS);
+  await sequelize.sync();
 
-app.listen(port, function () {
-    console.log(`starting app on: http://${address}`);
+  console.log("Database Connected");
+
+  const app = express();
+  const port = process.env.PORT || 8080;
+
+  app.use(bodyParser.json());
+
+  // app.use(cors());
+  // We set the CORS origin to * so that we don't need to
+  // worry about the complexities of CORS. 
+  app.use(cors({
+    "allowedHeaders": [
+      'Origin', 'X-Requested-With',
+      'Content-Type', 'Accept',
+      'X-Access-Token', 'Authorization', 'Access-Control-Allow-Origin',
+      'Access-Control-Allow-Headers',
+      'Access-Control-Allow-Methods'
+    ],
+    "methods": 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+    "preflightContinue": true,
+    "origin": '*',
+  }));
+
+  app.use("/api/v0/", IndexRouter);
+
+  // Root URI call
+  app.get("/", async (req, res) => {
+    res.send("/api/v0/");
   });
+
+  // Start the Server
+  app.listen(port, () => {
+    console.log(`Backend server is listening on port ${port}....`);
+    console.log(`Frontent server running ${process.env.URL}`);
+    console.log(`press CTRL+C to stop server`);
+  });
+})();
