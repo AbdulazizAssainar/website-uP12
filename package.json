@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     
-    "start": "node server.js",
+    "start": "node ./www/server.js",
     "git": "yarn build && git commit -a -m 'commit' && git push",
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn ./src/server.ts",
