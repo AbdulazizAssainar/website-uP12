@@ -1,6 +1,8 @@
 "use strict";
-function getDeviceType() {
-    const ua = navigator.userAgent;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDeviceType = void 0;
+function getDeviceType(req) {
+    const ua = String(req.device).toUpperCase();
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
         return "tablet";
     }
@@ -9,4 +11,5 @@ function getDeviceType() {
     }
     return "desktop";
 }
+exports.getDeviceType = getDeviceType;
 ;

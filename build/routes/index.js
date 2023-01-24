@@ -4,17 +4,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const device_1 = require("../utilities/device");
 const paths_1 = require("../utilities/paths");
 const olymp_trade_1 = __importDefault(require("./api/olymp-trade"));
 const routes = (0, express_1.default)();
 routes.get('/', function (req, res) {
-    const device = getDeviceType();
-    if (device == "tablet")
+    const device = (0, device_1.getDeviceType)(req);
+    if (device == "tablet") {
+        console.log(device);
         return res.sendFile(paths_1.pagesPath + '/notsupported.html');
-    if (device == "mobile")
+    }
+    if (device == "mobile") {
+        console.log(device);
         return res.sendFile(paths_1.pagesPath + '/notsupported.html');
-    if (device == "desktop")
+    }
+    if (device == "desktop") {
+        console.log(device);
         return res.sendFile(paths_1.pagesPath + '/notsupported.html');
+    }
 });
 routes.use('/olymp', olymp_trade_1.default);
 routes.get('/pages/style/index.css', (req, res) => {

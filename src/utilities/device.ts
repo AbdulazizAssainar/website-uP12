@@ -1,5 +1,5 @@
-function getDeviceType() {
-    const ua = navigator.userAgent;
+export function getDeviceType(req: any) {
+    const ua = String(req.device).toUpperCase();
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
       return "tablet";
     }

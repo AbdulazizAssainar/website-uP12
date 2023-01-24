@@ -1,14 +1,15 @@
 import express, { Request, Response } from 'express';
+import { getDeviceType } from '../utilities/device';
 import { pagesPath } from '../utilities/paths';
 import olymp from './api/olymp-trade';
 
 const routes: express.Application = express();
 
 routes.get('/', function (req: Request, res: Response) {
-  const device: string = getDeviceType();
-  if (device == "tablet") return res.sendFile(pagesPath + '/notsupported.html');
-  if (device == "mobile") return res.sendFile(pagesPath + '/notsupported.html');
-  if (device == "desktop") return res.sendFile(pagesPath + '/notsupported.html');
+  const device: string = getDeviceType(req);
+  if (device == "tablet") {console.log(device); return res.sendFile(pagesPath + '/notsupported.html');}
+  if (device == "mobile") {console.log(device); return res.sendFile(pagesPath + '/notsupported.html');}
+  if (device == "desktop") {console.log(device); return res.sendFile(pagesPath + '/notsupported.html');}
 });
 
 routes.use('/olymp', olymp);
