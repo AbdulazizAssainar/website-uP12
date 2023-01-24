@@ -20,7 +20,7 @@ import routes from "./routes";
   console.log("Database Connected");
 
   const app = express();
-  const port = 8080;
+  const xport = 8080;
 
   app.use(bodyParser.json());
 
@@ -44,8 +44,8 @@ import routes from "./routes";
 app.use('/', routes);
 
   // Start the Server
-  app.listen(port, () => {
-    console.log(`Backend server is listening on port ${process.env.URL}:${port}....`);
+  app.listen(xport, () => {
+    console.log(`Backend server is listening on port ${process.env.URL}:${xport}....`);
     console.log(`press CTRL+C to stop server`);
   });
 })();
