@@ -1,10 +1,9 @@
 {
-  "name": "udagram-api",
-  "version": "2.0.0",
-  "description": "",
+  "name": "website",
+  "version": "1.0.0",
+  "description": "aws website using nodeJS for personal use",
   "main": "server.js",
   "scripts": {
-    
     "start": "node ./www/server.js",
     "git": "yarn build && git commit -a -m 'commit' && git push",
     "tsc": "npx tsc",
@@ -50,5 +49,13 @@
     "mocha": "^6.1.4",
     "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.9.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulazizAssainar/website-uP12.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbdulazizAssainar/website-uP12/issues"
+  },
+  "homepage": "https://github.com/AbdulazizAssainar/website-uP12#readme"
 }
