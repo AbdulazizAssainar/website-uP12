@@ -4,8 +4,11 @@ import olymp from './api/olymp-trade';
 
 const routes: express.Application = express();
 
-routes.get('/', function (req: Request, res: Response) {
-  res.sendFile(pagesPath + '/index.html');
+routes.get('/', async function (req: Request, res: Response) {
+  const device: string = await getDeviceType();
+  if (device == "tablet") return res.sendFile(pagesPath + '/notsupported.html');
+  if (device == "mobile") return res.sendFile(pagesPath + '/notsupported.html');
+  if (device == "desktop") return res.sendFile(pagesPath + '/notsupported.html');
 });
 
 routes.use('/olymp', olymp);
