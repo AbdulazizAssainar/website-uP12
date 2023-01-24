@@ -45,7 +45,7 @@ const routes_1 = __importDefault(require("./routes"));
     yield sequelize_1.sequelize.sync();
     console.log("Database Connected");
     const app = express_1.default();
-    const xport = 8080;
+    const port = process.env.PORT || 8080;
     app.use(body_parser_1.default.json());
     // app.use(cors());
     // We set the CORS origin to * so that we don't need to
@@ -65,8 +65,8 @@ const routes_1 = __importDefault(require("./routes"));
     // Root URI call
     app.use('/', routes_1.default);
     // Start the Server
-    app.listen(xport, () => {
-        console.log(`Backend server is listening on port ${process.env.URL}:${xport}....`);
+    app.listen(port, () => {
+        console.log(`Backend server is listening on port ${process.env.URL}:${port}....`);
         console.log(`press CTRL+C to stop server`);
     });
 }))();
