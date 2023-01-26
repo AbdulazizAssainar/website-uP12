@@ -1,0 +1,35 @@
+.w50 {
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.cp1 {
+    color: #F8F7F7;
+}
+
+.cp2 {
+    color: #C9A98F;
+}
+
+.cp3 {
+    color: #734822;
+}
+
+.cp4 {
+    color: #593119;
+}
+
+.cp5 {
+    color: #261207;
+}
