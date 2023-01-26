@@ -28,7 +28,7 @@ routes.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
     if (dtype == "desktop") {
         console.log(dtype);
-        return res.sendFile(path_1.pagePath + "/notsup.html");
+        return res.sendFile(path_1.pagePath + "/desktop/index.html");
     }
     res.send('unknowen device');
 }));

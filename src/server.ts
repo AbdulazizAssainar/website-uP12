@@ -9,6 +9,7 @@ import bodyParser from "body-parser";
 import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 import { config } from "./config/config";
 import routes from "./routes";
+import { pagePath } from "./modules/path";
 
 (async () => {
   dotenv.config();
@@ -23,6 +24,9 @@ import routes from "./routes";
   const port = process.env.PORT || 8080;
 
   app.use(bodyParser.json());
+  app.use('/assets', express.static(pagePath + '/assets'))
+  app.use('/ds', express.static(pagePath + '/desktop/style'))
+  app.use('/fonts', express.static(pagePath + '/assets/fonts'))
 
   // app.use(cors());
   // We set the CORS origin to * so that we don't need to

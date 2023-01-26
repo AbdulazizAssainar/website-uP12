@@ -38,6 +38,7 @@ const sequelize_1 = require("./sequelize");
 const body_parser_1 = __importDefault(require("body-parser"));
 const model_index_1 = require("./controllers/v0/model.index");
 const routes_1 = __importDefault(require("./routes"));
+const path_1 = require("./modules/path");
 (() => __awaiter(void 0, void 0, void 0, function* () {
     dotenv.config();
     yield sequelize_1.sequelize.addModels(model_index_1.V0_FEED_MODELS);
@@ -47,6 +48,9 @@ const routes_1 = __importDefault(require("./routes"));
     const app = express_1.default();
     const port = process.env.PORT || 8080;
     app.use(body_parser_1.default.json());
+    app.use('/assets', express_1.default.static(path_1.pagePath + '/assets'));
+    app.use('/ds', express_1.default.static(path_1.pagePath + '/desktop/style'));
+    app.use('/fonts', express_1.default.static(path_1.pagePath + '/assets/fonts'));
     // app.use(cors());
     // We set the CORS origin to * so that we don't need to
     // worry about the complexities of CORS. 
