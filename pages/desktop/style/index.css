@@ -7,7 +7,7 @@ body {
     color: #261207;
     font-family: 'Century';
     background-image: url('/assets/bg02.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
