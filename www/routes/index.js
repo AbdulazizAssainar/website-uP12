@@ -17,7 +17,6 @@ const deviceType_1 = require("../modules/deviceType");
 const path_1 = require("../modules/path");
 const routes = express_1.default.Router();
 routes.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log();
     const dtype = yield deviceType_1.getDeviceType(req);
     if (dtype == "mobile") {
         console.log(dtype);

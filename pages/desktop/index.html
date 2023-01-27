@@ -1,8 +1,13 @@
 <html>
     <head>
         <link rel="stylesheet" href="/ds/index.css">
+        <link rel="icon" href="/assets/blogo.svg" sizes="any" type="image/svg+xml">
+        <title>Home</title>
     </head>
     <body>
+        <div id="loading" style="background-color: white;width: 100%;height: 100%;position: fixed;top: 0;display: flex;justify-content: center;align-items: center;">
+            <img src="/assets/loading.gif" style="height: 10%; opacity: 30%;">
+        </div>
         <div class="header row">
             <div style="width: 53%;">
                 <img class="h-image rounded-gradient-borders" src="/assets/personal-image.png" alt="Abdulaziz Assainar">
@@ -19,12 +24,41 @@
                         <div class="tbt cp3">test</div>
                     </div>
                 </div>
-                <div style="padding-left: 5%;" class="center-header">
+                <div class="center-header" style="padding: 0 13% 0 5%;">
                     <H1>Abdulaziz</H1>
                     <H1 style="margin-top: -40px;" class="cp3">&nbsp;&nbsp;  assainar</H1>
+                    <div style="padding-top: 5%;display: flex;justify-content: space-between;flex-direction: row;">
+                        <a href="https://www.facebook.com/AbdulazizAssainar">facebook</a>
+                        <a href="https://twitter.com/AbdulazizKunhi">twitter</a>
+                        <a href="mailto:abdulazizassainar@gmail.com">mail</a>
+                    </div>
+                    <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                        <div style="margin: 10% 0 0 0;font-size: x-large;border-style: solid;border-radius: 240px;aspect-ratio: 16 / 2.8;height: 55px;display: flex;align-items: center;justify-content: space-evenly;">
+                            <a href="https://github.com/AbdulazizAssainar">GitHub</a>
+                            <a>|</a>
+                            <a href="https://www.linkedin.com/in/abdulazizassainar/">LinkedIn</a>
+                        </div>
+                        <a href="http://abdulaziz.assainar.com/blog"
+                        style="margin-top: 10%;font-size: x-large;border-style: solid;border-radius: 240px;aspect-ratio: 16 / 8;height: 55px;display: flex;align-items: center;justify-content: space-evenly;"
+                        >Blog</a>
+                    </div>
                 </div>
-                <div class="bottom-header"></div>
+                <div class="bottom-header" style="padding: 4% 10% 0 5%;">
+                    <h2>About | @</h2>
+                    <p>
+                        orem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                        obcaecati tenetur iure
+                    </p>
+                </div>
             </div>
         </div>
     </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("loading").style.display = "none";
+        }, false);  
+    </script>
 </html>

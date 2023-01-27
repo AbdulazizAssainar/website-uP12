@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDeviceType = void 0;
 function getDeviceType(req) {
     const ua = String(req.get('User-Agent'));
-    console.log("this device is" + ua);
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
         return "tablet";
     }
