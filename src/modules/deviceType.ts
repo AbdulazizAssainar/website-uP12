@@ -1,5 +1,6 @@
 export function getDeviceType(req: any) {
-    const ua = String(req.device);
+    const ua = String(req.get('User-Agent'));
+    console.log("this device is" + ua)
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
       return "tablet";
     }
