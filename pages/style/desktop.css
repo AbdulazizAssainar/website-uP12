@@ -1,5 +1,5 @@
-@import url("/ds/shorts.css");
-@import url("/ds/fonts.css");
+@import url("/style/shorts.css");
+@import url("/style/fonts.css");
 
 body {
     padding: 0;
@@ -26,12 +26,36 @@ h2, p, a {
 }
 
 .header {
-    background-image: url('/assets/bg03.png');
-    background-size: contain;
     width: 100%;
     height: 100%;
     max-height: 100%;
-    background-repeat: no-repeat;
+}
+
+.body {
+    width: 80%;
+    padding: 5% 10%;
+    background: #ffffff66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificates {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.certificates img {
+    margin: 1%;
+    width: 40%;
+    border: 10px solid aliceblue;
+    border-radius: 50px;
+    box-shadow: 10px 10px 15px 0 #0000002e;
+    -moz-box-shadow: 10px 10px 15px 0 #0000002e;
+    -webkit-box-shadow: 10px 10px 15px 0 #0000002e;
 }
 
 .top-header {

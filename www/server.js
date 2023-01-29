@@ -50,6 +50,7 @@ const path_1 = require("./modules/path");
     app.use(body_parser_1.default.json());
     app.use('/assets', express_1.default.static(path_1.pagePath + '/assets'));
     app.use('/ds', express_1.default.static(path_1.pagePath + '/desktop/style'));
+    app.use('/style', express_1.default.static(path_1.pagePath + '/style'));
     app.use('/fonts', express_1.default.static(path_1.pagePath + '/assets/fonts'));
     // app.use(cors());
     // We set the CORS origin to * so that we don't need to

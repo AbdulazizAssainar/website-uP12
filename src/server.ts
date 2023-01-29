@@ -26,6 +26,7 @@ import { pagePath } from "./modules/path";
   app.use(bodyParser.json());
   app.use('/assets', express.static(pagePath + '/assets'))
   app.use('/ds', express.static(pagePath + '/desktop/style'))
+  app.use('/style', express.static(pagePath + '/style'))
   app.use('/fonts', express.static(pagePath + '/assets/fonts'))
 
   // app.use(cors());

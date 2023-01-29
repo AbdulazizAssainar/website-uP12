@@ -20,7 +20,7 @@ routes.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const dtype = yield deviceType_1.getDeviceType(req);
     if (dtype == "mobile") {
         console.log(dtype);
-        return res.sendFile(path_1.pagePath + "/notsup.html");
+        return res.sendFile(path_1.pagePath + "/mobile/index.html");
     }
     if (dtype == "tablet") {
         console.log(dtype);
