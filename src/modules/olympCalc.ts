@@ -1,4 +1,5 @@
 function calcData() {
+    
     const getCapital: number = (document.getElementById("capital") as HTMLInputElement).value as unknown as number 
     const getRatio: number = (document.getElementById("percentage") as HTMLInputElement).value  as unknown as number / 100
     const getDays: number = (document.getElementById("days") as HTMLInputElement).value  as unknown as number
