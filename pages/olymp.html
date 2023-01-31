@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/style/olymp.css">
+        <script src="/scripts/olympCalc.js"></script>
+    </head>
+    <body>
+          <div class="container">
+            <form action="#">
+                <label for="fname">Capital</label><br>
+                <input type="number" id="capital" required><br><br>
+                <label for="lname">Percentage</label><br>
+                <input type="number" id="percentage" required><br><br>
+                <label for="lname">Days</label><br>
+                <input type="number" id="days" required><br><br>
+                <input type="submit" onclick="calcData()" value="Calculate" onsubmit="return false">
+            </form>
+          </div>
+          <div class="container">
+            <div style=" display: flex; flex-direction: row; align-items: center; ">
+                <h2>Net:</h2>&nbsp;&nbsp;
+                <h2 id="pNet">0</h2>
+            </div>
+            <div style=" display: flex; flex-direction: row; align-items: center; ">
+                <h2>Balance:</h2>&nbsp;&nbsp;
+                <h2 id="pBalance">0</h2>
+            </div>
+          </div>
+    </body>
+</html>

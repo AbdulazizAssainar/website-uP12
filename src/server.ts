@@ -9,7 +9,7 @@ import bodyParser from "body-parser";
 import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 import { config } from "./config/config";
 import routes from "./routes";
-import { pagePath } from "./modules/path";
+import { pagePath, wwwPath } from "./modules/path";
 
 (async () => {
   dotenv.config();
@@ -28,6 +28,7 @@ import { pagePath } from "./modules/path";
   app.use('/ds', express.static(pagePath + '/desktop/style'))
   app.use('/style', express.static(pagePath + '/style'))
   app.use('/fonts', express.static(pagePath + '/assets/fonts'))
+  app.use('/scripts', express.static(wwwPath + '/modules'))
 
   // app.use(cors());
   // We set the CORS origin to * so that we don't need to
