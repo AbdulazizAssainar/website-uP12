@@ -2,6 +2,9 @@
     <head>
         <link rel="stylesheet" href="/style/mobile.css">
         <link rel="icon" href="/assets/blogo.svg" sizes="any" type="image/svg+xml">
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <title>Home</title>
     </head>
     <body>
@@ -13,6 +16,46 @@
             <p>
                 A Full-Stack Web Developer from India, living in Egypt. Passionate about creating innovative digital solutions that make a difference.
             </p>
+            <div class="spacing"></div>
+            <h1>Logos</h1>
+            <div style="width: 100%;max-width: 100%;">
+                <div class="container" style=" width: 100%; ">
+                    <section class="customer-logos slider">
+                       <div class="slide"><img src="/assets/logos/aam.png"></div>
+                       <div class="slide"><img src="/assets/logos/asst1.png"></div>
+                       <div class="slide"><img src="/assets/logos/asst2.png"></div>
+                       <div class="slide"><img src="/assets/logos/donna.png"></div>
+                       <div class="slide"><img src="/assets/logos/panenka.png"></div>
+                       <div class="slide"><img src="/assets/logos/sandan.png"></div>
+                       <div class="slide"><img src="/assets/logos/shownah.png"></div>
+                       <div class="slide"><img src="/assets/logos/vsteps.png"></div>
+                    </section>
+                 </div>
+                 <script>
+                     $(document).ready(function(){
+                         $('.customer-logos').slick({
+                             slidesToShow: 6,
+                             slidesToScroll: 1,
+                             autoplay: true,
+                             autoplaySpeed: 1500,
+                             arrows: false,
+                             dots: false,
+                             pauseOnHover: false,
+                             responsive: [{
+                                 breakpoint: 768,
+                                 settings: {
+                                     slidesToShow: 4
+                                 }
+                             }, {
+                                 breakpoint: 520,
+                                 settings: {
+                                     slidesToShow: 3
+                                 }
+                             }]
+                         });
+                     });
+                 </script>
+            </div>
             <div class="spacing"></div>
             <h1>Certificates</h1>
             <div class="certificates">

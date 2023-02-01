@@ -24,6 +24,7 @@ import { pagePath, wwwPath } from "./modules/path";
   const port = process.env.PORT || 8080;
 
   app.use(bodyParser.json());
+  app.use('/pages', express.static(pagePath))
   app.use('/assets', express.static(pagePath + '/assets'))
   app.use('/ds', express.static(pagePath + '/desktop/style'))
   app.use('/style', express.static(pagePath + '/style'))

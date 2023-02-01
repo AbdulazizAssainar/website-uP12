@@ -48,6 +48,7 @@ const path_1 = require("./modules/path");
     const app = express_1.default();
     const port = process.env.PORT || 8080;
     app.use(body_parser_1.default.json());
+    app.use('/pages', express_1.default.static(path_1.pagePath));
     app.use('/assets', express_1.default.static(path_1.pagePath + '/assets'));
     app.use('/ds', express_1.default.static(path_1.pagePath + '/desktop/style'));
     app.use('/style', express_1.default.static(path_1.pagePath + '/style'));

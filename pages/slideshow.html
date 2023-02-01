@@ -1,0 +1,37 @@
+<div class="container">
+   <section class="customer-logos slider">
+      <div class="slide"><img src="/assets/logos/aam.png"></div>
+      <div class="slide"><img src="/assets/logos/asst1.png"></div>
+      <div class="slide"><img src="/assets/logos/asst2.png"></div>
+      <div class="slide"><img src="/assets/logos/donna.png"></div>
+      <div class="slide"><img src="/assets/logos/panenka.png"></div>
+      <div class="slide"><img src="/assets/logos/sandan.png"></div>
+      <div class="slide"><img src="/assets/logos/shownah.png"></div>
+      <div class="slide"><img src="/assets/logos/vsteps.png"></div>
+   </section>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
